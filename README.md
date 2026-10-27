@@ -1,4 +1,4 @@
-# Nextbridge Lesson Factory
+# Gomdori Lesson Factory
 
 교안을 많이 만드는 저장소가 아니라, **한 번에 하나(WIP=1)**의 교안을 검증 가능한 상태로 만들고 Gate를 통과한 결과만 배포하기 위한 품질 엔진입니다.
 
