@@ -1,5 +1,7 @@
 # ADR-0001 — Nextbridge Lesson Factory 분리 아키텍처
 
+> **2026-10-31 추기:** 아래 문서는 작성 당시의 역사적 아키텍처 결정입니다. 현재 GitHub 저장소 이름은 `emotigom/gomdori-lesson-factory`이며, 구 GitHub 저장소명은 commit/결정 이력 해석을 위해 남깁니다. Cloudflare Worker 서비스 식별자 변경은 별도 배포 작업입니다.
+
 - 상태: Accepted
 - 결정일: 2026-08-15
 
