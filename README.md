@@ -2,6 +2,13 @@
 
 교안을 많이 만드는 저장소가 아니라, **한 번에 하나(WIP=1)**의 교안을 검증 가능한 상태로 만들고 Gate를 통과한 결과만 배포하기 위한 품질 엔진입니다.
 
+## 저장소 이름과 Cloudflare Worker의 독립성 (2026-10-31)
+
+- GitHub 저장소는 `emotigom/gomdori-lesson-factory`로 정상 이름 변경되었고 **기존 Git commit SHA는 유지**합니다. Pipeline 쪽 신뢰 저장소 경로 변경은 별도 PR #6에서 검증했습니다.
+- `wrangler.jsonc`와 `worker/src/index.js`에 남은 `nextbridge-lesson-factory`는 현재 연결된 **외부 Cloudflare Worker 서비스 식별자**로 취급합니다. GitHub 저장소를 이름 변경했다고 Cloudflare Worker가 자동으로 바뀌지는 않습니다.
+- 아직 Cloudflare Worker의 실제 배포 대상·트래픽·R2 바인딩을 확인하지 못했으므로 이름을 코드에서 먼저 변경하거나 새 Worker를 배포하지 않습니다. 필요시 [Worker 이전 절차](docs/operations/worker-rename.md)에 따라 별도 승인 후 진행합니다.
+- 기존 수업 자료/증거 commit은 그대로 보관하고, 실제 교안 내용이나 학생·학교 원본 자료를 public Git에 추가하지 않습니다.
+
 ## 비협상 원칙
 
 - `DRAFT → CONTENT_QA → TECH_QA → INSTRUCTOR_PILOT → FIELD_PILOT → FIELD_READY → CANONICAL`
